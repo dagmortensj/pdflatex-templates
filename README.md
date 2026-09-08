@@ -17,7 +17,7 @@ version in `no/`:
 | **ffv**     | JHEP two-column article  | STIX2 typography, numbered citations                                        |
 | **handout** | Problem sheets           | theorem environments, exercises, emphasis boxes, python code; optional unnumbered mode |
 | **notes**   | CUP-style lecture notes  | theorem environments, exercises, emphasis boxes, python code; framed TOC, numbered citations|
-| **exam**    | Classroom tests (12 pt)  | title block with name, date, time and aids; Part 1 / Part 2 or Level 1–3; "Page 2 of 5" on every page; optional cover page and booklet padding for duplex printing |
+| **exam**    | Classroom tests (12 pt)  | title block with name, date, time and aids; Part 1 / Part 2 or Level 1–3; multiple-choice lists; "Page 2 of 5" on every page; optional cover page and booklet padding for duplex printing |
 
 All templates include figure and table support.
 
