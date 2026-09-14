@@ -2,7 +2,7 @@
 
 A small collection of personal LaTeX templates for academic and
 teaching work — books, articles, lecture notes, problem sheets,
-classroom tests.
+classroom tests, folded formula sheets.
 Each template is self-contained and available in both English and
 Norwegian.
 
@@ -18,8 +18,9 @@ version in `no/`:
 | **handout** | Problem sheets           | theorem environments, exercises, emphasis boxes, python code; optional unnumbered mode |
 | **notes**   | CUP-style lecture notes  | theorem environments, exercises, emphasis boxes, python code; framed TOC, numbered citations|
 | **exam**    | Classroom tests (12 pt)  | title block with name, date, time and aids; Part 1 / Part 2 or Level 1–3; multiple-choice lists; "Page 2 of 5" on every page; optional cover page and booklet padding for duplex printing |
+| **formulasheet** | Folded formula sheet (10 pt) | two landscape A5 pages stacked on one A4 sheet: constants above the fold, formulas below, two columns each; fold marks; optional tight mode |
 
-All templates include figure and table support.
+All templates except `formulasheet` include figure support; all include tables.
 
 ## Quick start
 
@@ -32,8 +33,8 @@ Each template ships with:
 
 - `main.tex` — the document body, with example content demonstrating the template's features
 - A style file (`bookstyle.sty`, `notesstyle.sty`, `handoutstyle.sty`, ...) — all formatting lives here
-- A `.bib` file with example bibliography entries (not `exam`, which has no bibliography)
-- A `figures/` (or `figurer/`) folder with a stock figure (`exam` points `\graphicspath` there but ships none)
+- A `.bib` file with example bibliography entries (not `exam` or `formulasheet`, which have no bibliography)
+- A `figures/` (or `figurer/`) folder with a stock figure (`exam` points `\graphicspath` there but ships none; `formulasheet` has no figures)
 - A `README.md` documenting the template's features and conventions
 
 The bundled `main.pdf` lets you preview what each template produces without compiling.
@@ -53,7 +54,12 @@ equivalent. The differences are:
   `\poeng`, and options `forside`, `hefte`, `statussjekk`, `innrykk`;
   the English one `\exampart`, `\level`, `\subtitle`, `\duration`,
   `\aids`, `\points`, and `coverpage`, `booklet`, `statuscheck`,
-  `indent`. `parity-diff.sh` maps one onto the other.
+  `indent`. The Norwegian `formulasheet` (`formelark`) uses `halvdel`,
+  `\gruppe`, `konstanter`, `tabellto`, `formler`,
+  `formlerto`, `\formelrad`, `\formelstrekk` and the option `tett`;
+  the English one `half`, `\topic`, `constants`, `twocol`,
+  `formulas`, `formulastwo`, `\formularow`, `\formulastretch` and
+  `tight`. `parity-diff.sh` maps one onto the other.
 - **Comments and placeholder text** — written in the matching language
 
 The layout, packages, and typography are identical between the two versions.
