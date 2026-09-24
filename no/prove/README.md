@@ -199,6 +199,7 @@ linje brekkes — brekker den, forskyves nummereringen.
 - **Overskrifter:** «Del 1» i `\Large` fet sans, undertekst i
   vanlig sans under; oppgavehoder i `\large` fet sans
 - **Farger:** mørkerød linje under tittelblokka og i `\separator`;
-  `darkorange` og `darkolive` til figurer, som i resten av familien
+  `darkorange`, `darkolive`, `darkblue` og `darkplum` til figurer, som i
+  resten av familien
 - **Ingen hyperref:** en prøve er trykt; referanser står i svart.
   Trengs lenker, last `hyperref` sist i `main.tex`
