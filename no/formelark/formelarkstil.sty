@@ -20,8 +20,8 @@
 %
 % Motor: pdflatex.
 %
-% Rekkefølgen nedenfor: pakkevalg, språk, fonter, tall,
-% geometri og sideoppsett, halvdeler, avsnitt, farger,
+% Rekkefølgen nedenfor: pakkevalg, språk, vektorpiler, fonter,
+% tall, geometri og sideoppsett, halvdeler, avsnitt, farger,
 % overskrifter, tabeller.
 % ============================================================
 
@@ -53,6 +53,25 @@
 % stilen er nok til å få orddeling og tegnsetting riktig.
 % ============================================================
 \RequirePackage[norsk]{babel}
+
+
+% ============================================================
+% VEKTORPILER
+%
+% \vv{F} gir vektorpil over ett symbol. Det er fontens egen pil
+% (\vec): pdfLaTeX plasserer den riktig på kursive bokstaver, og
+% indekser står tett inntil, \vv{F}_1. Over flere symboler, som
+% en strekning, skrives \overrightarrow{AB}. \vv*{F}{net} er det
+% samme som \vv{F}_{net}. Ingen pakke trengs; esvect skal ikke
+% lastes. Definisjonen settes ved \begin{document}, så den
+% vinner også i et eldre dokument som fortsatt laster esvect.
+% ============================================================
+\expandafter\chardef\csname vvfix@atcode\endcsname=\catcode`\@
+\catcode`\@=11
+\def\VV@star#1#2{\vec{#1}_{#2}}
+\DeclareRobustCommand{\VV@vv}{\@ifstar\VV@star\vec}
+\AtBeginDocument{\let\vv\VV@vv}
+\catcode`\@=\vvfix@atcode
 
 
 % ============================================================

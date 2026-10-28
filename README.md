@@ -27,7 +27,7 @@ All templates except `formulasheet` include figure support; all include tables.
 1. Copy the template folder you want into a new project
 2. Open the new copy's `README.md` for template-specific guidance
 3. Edit `main.tex` — the document body is sectioned for easy navigation
-4. Compile with `pdflatex` (each template's README documents the exact compile order; `exam` needs two passes for "Page 2 of 5", which `latexmk -pdf` handles)
+4. Compile with `pdflatex` (each template's README documents the exact compile order; `exam` needs two passes for "Page 2 of 5", which `latexmk -pdf` handles). Each template folder carries a hidden `.latexmkrc` that selects pdflatex, so a plain `latexmk main` works as well
 
 Each template ships with:
 

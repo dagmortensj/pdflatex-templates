@@ -18,10 +18,10 @@
 % Latin Modern in place of the OpenType font, which needs
 % LuaLaTeX.
 %
-% Order below: language, fonts, colours, geometry,
-% spacing, sectioning with swallow rule, page furniture,
-% structured environments, citations, emphasis boxes,
-% hyperref last.
+% Order below: language, vector arrows, fonts, colours,
+% geometry, spacing, sectioning with swallow rule, page
+% furniture, structured environments, citations, emphasis
+% boxes, hyperref last.
 % ============================================================
 
 
@@ -69,6 +69,26 @@
     separate-uncertainty  = true,
   }%
 }
+
+
+% ============================================================
+% VECTOR ARROWS
+%
+% \vv{F} gives a vector arrow over a single symbol. It is the
+% font's own arrow (\vec): pdfLaTeX places it correctly on italic
+% letters, and indices sit close, \vv{F}_1. Over several symbols,
+% such as a line segment, write \overrightarrow{AB}.
+% \vv*{F}{net} is the same as \vv{F}_{net}. No package is needed;
+% esvect should not be loaded. The definition is set at
+% \begin{document}, so it also wins in an older document that
+% still loads esvect.
+% ============================================================
+\expandafter\chardef\csname vvfix@atcode\endcsname=\catcode`\@
+\catcode`\@=11
+\def\VV@star#1#2{\vec{#1}_{#2}}
+\DeclareRobustCommand{\VV@vv}{\@ifstar\VV@star\vec}
+\AtBeginDocument{\let\vv\VV@vv}
+\catcode`\@=\vvfix@atcode
 
 
 % ============================================================

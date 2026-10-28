@@ -28,9 +28,9 @@ for Physics 1.
 latexmk -pdf main
 ```
 
-The style loads babel and siunitx itself. If the sheet needs
-vector arrows, load `esvect` in the package block of `main.tex`
-— the example does.
+The style loads babel and siunitx itself and provides vector
+arrows without an extra package: `\vv{F}` over one symbol,
+`\overrightarrow{AB}` over several.
 
 ## Structure
 

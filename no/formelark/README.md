@@ -28,8 +28,9 @@ Fysikk 1.
 latexmk -pdf main
 ```
 
-Stilen laster babel og siunitx selv. Trenger arket vektorpiler,
-last `esvect` i pakkeblokken i `main.tex` — eksemplet gjør det.
+Stilen laster babel og siunitx selv, og gir vektorpiler uten
+ekstra pakke: `\vv{F}` over ett symbol, `\overrightarrow{AB}`
+over flere.
 
 ## Oppbygning
 

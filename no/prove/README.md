@@ -180,10 +180,11 @@ linje brekkes — brekker den, forskyves nummereringen.
   stå, f.eks. sist i instruksen før Del 1
 - `[innrykk]` som pakkevalg henter tilbake avsnittsinnrykk i
   stedet for luft mellom avsnittene; kan kombineres med de andre
-- `esvect` (`\vv{F}`), `siunitx` (norsk oppsett fra stilfila)
-  og `tikz` lastes fra `main.tex`; fjern det som ikke trengs.
-  Indekser hører utenfor pilen: `\vv{F}_1`, ikke `\vv{F_1}` —
-  ellers spenner pilen over indeksen også
+- `siunitx` (norsk oppsett fra stilfila) og `tikz` lastes fra
+  `main.tex`; fjern det som ikke trengs. Vektorpiler kommer fra
+  stilfila, uten pakke: `\vv{F}` over ett symbol,
+  `\overrightarrow{AB}` over flere. Indekser hører utenfor
+  pilen: `\vv{F}_1`, ikke `\vv{F_1}`
 
 ## Typografi
 

@@ -35,9 +35,9 @@
 % lualatex-templates: samme oppsett, men med Latin Modern
 % i stedet for OpenType-fontene, som krever LuaLaTeX.
 %
-% Rekkefølgen nedenfor: språk, fonter, mikrotypografi,
-% geometri, avstander, seksjonering, sidemøblering,
-% siteringer, og hyperref sist.
+% Rekkefølgen nedenfor: språk, vektorpiler, fonter,
+% mikrotypografi, geometri, avstander, seksjonering,
+% sidemøblering, siteringer, og hyperref sist.
 % ============================================================
 
 
@@ -89,6 +89,25 @@
     separate-uncertainty  = true,
   }%
 }
+
+
+% ============================================================
+% VEKTORPILER
+%
+% \vv{F} gir vektorpil over ett symbol. Det er fontens egen pil
+% (\vec): pdfLaTeX plasserer den riktig på kursive bokstaver, og
+% indekser står tett inntil, \vv{F}_1. Over flere symboler, som
+% en strekning, skrives \overrightarrow{AB}. \vv*{F}{net} er det
+% samme som \vv{F}_{net}. Ingen pakke trengs; esvect skal ikke
+% lastes. Definisjonen settes ved \begin{document}, så den
+% vinner også i et eldre dokument som fortsatt laster esvect.
+% ============================================================
+\expandafter\chardef\csname vvfix@atcode\endcsname=\catcode`\@
+\catcode`\@=11
+\def\VV@star#1#2{\vec{#1}_{#2}}
+\DeclareRobustCommand{\VV@vv}{\@ifstar\VV@star\vec}
+\AtBeginDocument{\let\vv\VV@vv}
+\catcode`\@=\vvfix@atcode
 
 
 % ============================================================
