@@ -95,7 +95,7 @@ vertikale streker.
 
 ## Typografi
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Sideoppsett:** B5 (trykk) eller A4 (utkast), via `\documentclass`
 - **Satsbredde:** 116 mm — 2,36 lilleboksalfabeter, innenfor Bringhursts
   vindu på 1,8–2,4, samme mål som lualatex-boka

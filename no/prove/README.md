@@ -188,7 +188,7 @@ linje brekkes — brekker den, forskyves nummereringen.
 
 ## Typografi
 
-- **Skrift:** MLModern (T1), tekst og matematikk; MLModern Sans
+- **Skrift:** Latin Modern (T1), tekst og matematikk; Latin Modern Sans
   til tittel, deler og oppgavehoder — samme familie, samme
   x-høyde, ingen ekstra font
 - **Størrelse:** 12 pt — ett steg over handout-en, fordi en prøve

@@ -134,7 +134,7 @@ spacing can also be set directly:
 
 ## Typography
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Page layout:** landscape A5 pages with an 8 mm margin, two per
   A4 sheet (`pgfpages`, "2 on 1"); text area 194 × 132.5 mm per page,
   16 mm of space at the fold; two 93 mm columns

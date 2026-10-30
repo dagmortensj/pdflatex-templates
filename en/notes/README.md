@@ -208,7 +208,7 @@ vertical lines.
 
 ## Typography
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Page size:** A4, symmetric margins (3.0 cm L/R)
 - **Line spacing:** 1.07
 - **Align rows:** `\jot` = 8 pt (default 3 pt) — more air between the

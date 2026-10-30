@@ -133,7 +133,7 @@ Radavstanden kan også settes direkte:
 
 ## Typografi
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Sideoppsett:** liggende A5-sider med 8 mm marg, to på hvert
   A4-ark (`pgfpages`, «2 on 1»); satsflate 194 × 132,5 mm per side,
   16 mm luft ved bretten; to spalter på 93 mm

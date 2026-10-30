@@ -209,7 +209,7 @@ vertikale streker.
 
 ## Typografi
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Sideoppsett:** A4, symmetriske marger (3.0 cm V/H)
 - **Linjeavstand:** 1.07
 - **Align-rader:** `\jot` = 8 pt (standard er 3 pt) — mer luft mellom

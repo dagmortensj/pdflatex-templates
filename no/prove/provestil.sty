@@ -15,7 +15,7 @@
 % Alt om hvordan prøven ser ut settes her; main.tex
 % inneholder innholdet og eventuelle ekstra pakker.
 %
-% Motor: pdflatex. Fonten er MLModern i T1-koding, og
+% Motor: pdflatex. Fonten er Latin Modern i T1-koding, og
 % matematikken kommer fra samme familie.
 %
 % Rekkefølgen nedenfor: pakkevalg, språk, tall, vektorpiler,
@@ -131,14 +131,12 @@
 % ============================================================
 % FONT OG MIKROTYPOGRAFI
 %
-% MLModern i T1-koding, som i handoutstilen. Det er Computer
-% Modern tegnet med tykkere strek — samme valg som lua-malene
-% gjør med NewComputerModern: vanlig Latin Modern blir tynn
-% på laserutskrift, og en prøve blir alltid skrevet ut. T1
+% Latin Modern i T1-koding, som i handoutstilen: Computer
+% Modern som vektorfont med fullt T1-tegnsett. T1
 % er ikke pynt: med den gamle OT1-kodingen settes æ, ø og å
 % sammen av aksentbokser, og da virker ikke orddelingen.
 %
-% Pakka setter også \sffamily til MLModern Sans — samme
+% Pakka setter også \sffamily til Latin Modern Sans — samme
 % tegner, samme x-høyde, samme tyngde på arket — og det er
 % den som bærer tittelblokka, delene og oppgavehodene
 % nedenfor. Ingen egen sans-font lastes; grotesken hører til
@@ -149,7 +147,7 @@
 % press, av en elev, og ofte som kopi.
 % ============================================================
 \RequirePackage[T1]{fontenc}
-\RequirePackage{mlmodern}
+\RequirePackage{lmodern}
 
 \RequirePackage[
   expansion=true,

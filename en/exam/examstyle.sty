@@ -15,7 +15,7 @@
 % Everything about how the test looks is set here; main.tex
 % holds the content and any extra packages.
 %
-% Engine: pdflatex. The font is MLModern in T1 encoding, and
+% Engine: pdflatex. The font is Latin Modern in T1 encoding, and
 % the mathematics comes from the same family.
 %
 % Order below: package options, language, numbers, vector
@@ -130,15 +130,13 @@
 % ============================================================
 % FONT AND MICROTYPOGRAPHY
 %
-% MLModern in T1 encoding, as in the handout style. It is
-% Computer Modern redrawn with a heavier stroke — the same
-% choice the lua templates make with NewComputerModern:
-% plain Latin Modern comes out thin on a laser printer, and
-% a test is always printed. T1 is not decoration: with the
+% Latin Modern in T1 encoding, as in the handout style:
+% Computer Modern as an outline font with a full T1 character
+% set. T1 is not decoration: with the
 % old OT1 encoding accented letters are assembled from
 % accent boxes, and hyphenation stops working across them.
 %
-% The package also sets \sffamily to MLModern Sans — same
+% The package also sets \sffamily to Latin Modern Sans — same
 % designer, same x-height, same weight on the page — and
 % that is what carries the title block, the parts and the
 % exercise heads below. No separate sans font is loaded; the
@@ -149,7 +147,7 @@
 % quickly, under pressure, by a student, and often as a copy.
 % ============================================================
 \RequirePackage[T1]{fontenc}
-\RequirePackage{mlmodern}
+\RequirePackage{lmodern}
 
 \RequirePackage[
   expansion=true,

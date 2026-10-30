@@ -198,7 +198,7 @@ if one does, the numbering shifts.
 
 ## Typography
 
-- **Typeface:** MLModern (T1), text and mathematics; MLModern Sans
+- **Typeface:** Latin Modern (T1), text and mathematics; Latin Modern Sans
   for the title, parts and exercise heads — the same family, the
   same x-height, no extra font
 - **Size:** 12 pt — one step above the handout, because a test is

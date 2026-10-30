@@ -95,7 +95,7 @@ vertical lines.
 
 ## Typography
 
-- **Font:** MLModern (T1)
+- **Font:** Latin Modern (T1)
 - **Page size:** B5 (print) or A4 (draft), via `\documentclass`
 - **Measure:** 116 mm — 2.36 lowercase alphabets, inside Bringhurst's
   1.8–2.4 window, the same measure as the lualatex book
