@@ -13,7 +13,7 @@ version in `no/`:
 
 | Template    | Description              | Features                                                                    |
 |-------------|--------------------------|-----------------------------------------------------------------------------|
-| **book**    | CUP-style monograph      | parts, chapters, drop caps, superscript citations                           |
+| **book-academic** | CUP-style monograph | parts, chapters, drop caps, superscript citations                           |
 | **ffv**     | JHEP two-column article  | STIX2 typography, numbered citations                                        |
 | **handout** | Problem sheets           | theorem environments, exercises, emphasis boxes, python code; optional unnumbered mode |
 | **notes**   | CUP-style lecture notes  | theorem environments, exercises, emphasis boxes, python code; framed TOC, numbered citations|
@@ -21,6 +21,11 @@ version in `no/`:
 | **formulasheet** | Folded formula sheet (10 pt) | two landscape A5 pages stacked on one A4 sheet: constants above the fold, formulas below, two columns each; fold marks; optional tight mode |
 
 All templates except `formulasheet` include figure support; all include tables.
+
+The `book-` prefix matches the book family in
+[lualatex-templates](https://github.com/dagmortensj/lualatex-templates),
+which adds `book-fiction` (a novel) and `book-poetry` (a poetry
+collection). Those two use `fontspec` and exist only there.
 
 ## Quick start
 
@@ -46,7 +51,7 @@ equivalent. The differences are:
 
 - **Babel** — `[english]` vs `[norsk]`
 - **Filenames** — Norwegian versions use Norwegian names
-  (`bok` instead of `book`, `referanser.bib` instead of `references.bib`,
+  (`bok-fag` instead of `book-academic`, `referanser.bib` instead of `references.bib`,
   `bokstil.sty` instead of `bookstyle.sty`, `prove/provestil.sty`
   instead of `exam/examstyle.sty`, etc.)
 - **Command names** — the Norwegian `exam` (`prove`) uses Norwegian

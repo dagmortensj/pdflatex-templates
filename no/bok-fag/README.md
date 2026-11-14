@@ -1,4 +1,4 @@
-# bok-mal
+# bok-fag-mal
 
 LaTeX-bokmal i CUP-stil med superskriftsiteringer.
 

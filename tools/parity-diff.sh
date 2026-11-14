@@ -123,9 +123,9 @@ compare() {  # compare <no-file> <en-file>
   fi
 }
 
-compare no/bok/bokstil.sty        en/book/bookstyle.sty
-compare no/bok/main.tex           en/book/main.tex
-compare no/bok/innhold/kapittel1.tex en/book/content/chapter1.tex
+compare no/bok-fag/bokstil.sty        en/book-academic/bookstyle.sty
+compare no/bok-fag/main.tex           en/book-academic/main.tex
+compare no/bok-fag/innhold/kapittel1.tex en/book-academic/content/chapter1.tex
 compare no/notat/notatstil.sty    en/notes/notesstyle.sty
 compare no/notat/main.tex         en/notes/main.tex
 compare no/ffv/ffvstil.sty        en/ffv/ffvstyle.sty
