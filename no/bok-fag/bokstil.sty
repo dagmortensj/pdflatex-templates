@@ -282,7 +282,7 @@
   {\normalfont}
   {\filcenter\scshape \chaptername\ \thechapter}
   {3ex}
-  {\filcenter\Huge\bk@caps}
+  {\filcenter\LARGE\bk@caps}
 
 \titlespacing*{\chapter}
   {0pt}{3.5ex plus 1ex minus .2ex}{11ex plus 2ex minus .5ex}
@@ -297,7 +297,7 @@
   {\normalfont}
   {\filcenter\scshape\strut}
   {3ex}
-  {\filcenter\Huge\bk@caps}
+  {\filcenter\LARGE\bk@caps}
 
 % ------------------ Seksjoner --------------------
 \titleformat{\section}
@@ -337,7 +337,7 @@
   {\normalfont}
   {\filcenter\scshape \partname\ \thepart}
   {3ex}
-  {\filcenter\LARGE\bk@caps}
+  {\filcenter\huge\bk@caps}
 
 \titlespacing*{\part}
   {0pt}{0.35\textheight}{0.35\textheight}
@@ -496,11 +496,16 @@
 % samme åpning som et nummerert kapittel og tittelen i samme
 % høyde (se SEKSJONERING). Første avsnitt får ikke innrykk.
 % Kommandoen setter toppteksten selv, så det ikke står
-% «Kapittel 0» der.
+% «Kapittel 0» der, og legger tittelen i innholdet (se
+% FORSTOFF OG BAKSTOFF I INNHOLDET).
 % ============================================================
 \makeatletter
 
 \newcommand{\frontchapter}[1]{%
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}%
+    {\protect\numberline{}\texorpdfstring{\protect\bk@frontentry{#1}}{#1}}%
   \chapter*{#1}%
   \markboth{#1}{#1}%
 }
@@ -678,6 +683,32 @@
 \renewcommand{\cftchappagefont}{\normalfont\color{black}}
 \renewcommand{\cftsecpagefont}{\normalfont\color{black}}
 \renewcommand{\cftsubsecpagefont}{\normalfont\color{black}}
+\makeatother
+
+
+% ============================================================
+% FORSTOFF OG BAKSTOFF I INNHOLDET
+%
+% Forord, takk, bibliografi og register står i innholdet uten
+% nummer og i kursiv, med tittelen i samme kolonne som
+% kapitteltitlene, så de skiller seg fra kapitlene. Foran
+% bakstoffet står det like mye luft som foran en del, så
+% bibliografien ikke ser ut til å høre til siste del. Av
+% samme grunn står bakstoffet på øverste nivå i bokmerkene,
+% ikke under siste del. Bibliografien og registeret åpner som
+% \frontchapter.
+% ============================================================
+\makeatletter
+\newcommand{\bk@frontentry}[1]{{\normalfont\itshape #1}}
+\appto\backmatter{\addtocontents{toc}{\protect\addvspace{\cftbeforepartskip}}}
+\appto\backmatter{\def\toclevel@chapter{-1}}
+\patchcmd{\thebibliography}
+  {\chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}}
+  {\frontchapter{\bibname}}
+  {}{}
+\AtBeginDocument{%
+  \@ifpackageloaded{imakeidx}{\indexsetup{level=\frontchapter}}{}%
+}
 \makeatother
 
 
