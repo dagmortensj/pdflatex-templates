@@ -33,7 +33,7 @@ Boken er delt i tre faser:
 
 | Fase           | Kommando        | Innhold                                       |
 |----------------|-----------------|-----------------------------------------------|
-| Frontmateriale | `\frontmatter`  | Tittel, dedikasjon, innhold, forord, takk     |
+| Frontmateriale | `\frontmatter`  | Smusstittel, tittel, kolofon, dedikasjon, innhold, forord, takk |
 | Hovedmateriale | `\mainmatter`   | Innledning, deler og kapitler                 |
 | Bakmateriale   | `\backmatter`   | Bibliografi, indeks                           |
 
@@ -42,11 +42,23 @@ Boken er delt i tre faser:
 ### Sidemaler
 
 ```latex
+\halftitlepage             % Smusstittel (valgfri, kommentert ut i main.tex)
 \booktitlepage             % Tittelside
+\colophonpage{...}         % Kolofon på baksiden av tittelsiden
 \dedicationpage{...}       % Dedikasjon (recto, sentrert kursiv)
 \booktoc                   % Innholdsfortegnelse
 \frontchapter{Forord}      % Unummerert kapittel i frontmateriale
 ```
+
+`\frontchapter`, innholdsfortegnelsen, bibliografien og registeret får
+samme åpning som et nummerert kapittel, med tittelen i samme høyde, bare
+uten «Kapittel N» over. Første avsnitt får ikke innrykk.
+
+### Stikkordregister
+
+Fjern kommentartegnene foran `\usepackage{imakeidx}` og `\makeindex` i
+preamblet og foran `\printindex` i bakmaterialet, og merk ord i teksten
+med `\index{ord}`. latexmk kjører makeindex av seg selv.
 
 ### Kapittelåpning med initial
 
@@ -104,7 +116,8 @@ vertikale streker.
 - **Align-rader:** `\jot` = 8 pt (standard er 3 pt) — mer luft mellom
   radene i `align`, felles for alle malene
 - **Avsnitt:** innrykk, ikke linjeskift
-- **Mikrotypografi:** protrusion, expansion, tracking aktivert
+- **Mikrotypografi:** protrusion, expansion, tracking aktivert; titler i
+  versaler sperret 80 tusendels gefirt
 - **Seksjoner:** unummererte, men i innholdsfortegnelse
 - **Siteringer:** superskript-tall, plassert nøyaktig der de står
 - **Bibliografi:** `1.` istedenfor `[1]`, sortert i siteringsrekkefølge
